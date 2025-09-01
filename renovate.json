@@ -2,5 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "kubernetes": {
     "managerFilePatterns": ["\\.ya?ml$"]
+  },
+  "docker": {
+    "managerFilePatterns": [
+      "(^|/|\\.)Dockerfile$",
+      "(^|/)Dockerfile\\.[^/]*$"
+    ]
   }
 }
