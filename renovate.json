@@ -1,12 +1,12 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "kubernetes": {
-    "managerFilePatterns": ["\\.ya?ml$"]
-  },
-  "dockerfile": {
-    "managerFilePatterns": [
-      "(^|/|\\.)Dockerfile$",
-      "(^|/)Dockerfile\\.[^/]*$"
-    ]
-  }
+  "enabledManagers": ["dockerfile", "helm-values", "regex"],
+  "regexManagers": [
+    {
+      "fileMatch": ["(^|/)k8s/.*\\.ya?ml$"],
+      "matchStrings": [
+        "image:\\s*(?<depName>\\S+):(?<currentValue>\\S+)"
+      ],
+      "datasourceTemplate": "docker"
+    }
+  ]
 }
