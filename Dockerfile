@@ -1,5 +1,5 @@
 # Use the official NGINX image as base
-FROM nginx:latest
+FROM nginx:1.29-alpine
 
 # Copy custom static website files to NGINX's default content directory
 COPY ./html /usr/share/nginx/html
