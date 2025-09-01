@@ -2,9 +2,9 @@
   "enabledManagers": ["dockerfile", "helm-values", "regex"],
   "regexManagers": [
     {
-      "fileMatch": ["(^|/)k8s/.*\\.ya?ml$"],
+      "fileMatch": ["\\.ya?ml$"],
       "matchStrings": [
-        "image:\\s*(?<depName>\\S+):(?<currentValue>\\S+)"
+        "image:\\s*(?<depName>[^:\\s]+):(?<currentValue>[^\\s]+)"
       ],
       "datasourceTemplate": "docker"
     }
