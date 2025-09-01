@@ -3,7 +3,7 @@
   "kubernetes": {
     "managerFilePatterns": ["\\.ya?ml$"]
   },
-  "docker": {
+  "dockerfile": {
     "managerFilePatterns": [
       "(^|/|\\.)Dockerfile$",
       "(^|/)Dockerfile\\.[^/]*$"
