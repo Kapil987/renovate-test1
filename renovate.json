@@ -1,0 +1,12 @@
+{
+  "enabledManagers": ["dockerfile", "helm-values", "kubernetes"],
+  "dockerfile": {
+    "managerFilePatterns": [
+      "/(^|/|\\.)([Dd]ocker|[Cc]ontainer)file$/",
+      "/(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$/"
+    ]
+  },
+  "kubernetes": {
+    "managerFilePatterns": ["/k8s/.+\\.ya?ml$/"]
+  }
+}
