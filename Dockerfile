@@ -1,4 +1,4 @@
-ARG TAG=1.27-alpine
+ARG TAG=1.29-alpine
 # Use the official NGINX image as base
 FROM nginx:${TAG}
 
