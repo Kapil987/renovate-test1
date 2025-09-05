@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: my-git-https-pat
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  url: https://github.com/Kapil987/renovate-test1.git
+  username: kapil987
+  password: "YOUR_TOKEN"
+  insecure: "false"  # set true if you want to skip TLS verification (not recommended)
