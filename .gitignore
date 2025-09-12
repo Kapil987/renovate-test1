@@ -1,2 +1,17 @@
 values.yaml
 .env
+renovate-test1/terraform_files/.terraform
+renovate-test1/terraform_files/.terraform.lock.hcl
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+
+**/.terraform/*
+.terraform.lock.hcl
+
+# Terragrunt cache
+.terragrunt-cache/
+**/.terragrunt-cache/

@@ -1,10 +1,5 @@
-# providers.tf
 terraform {
   required_providers {
-    kind = {
-      source  = "tehcyx/kind"
-       version = "0.9.0"
-    }
     helm = {
       source  = "hashicorp/helm"
       version = "3.0.2"
@@ -16,15 +11,12 @@ terraform {
   }
 }
 
-provider "kind" {}
-
 provider "kubernetes" {
-  # Configure with kubeconfig path or context to access kind cluster created below
-  config_path = "~/.kube/config"
+  config_path = var.kubeconfig_path
 }
 
 provider "helm" {
   kubernetes = {
-    config_path = "~/.kube/config"
+    config_path = var.kubeconfig_path
   }
 }
